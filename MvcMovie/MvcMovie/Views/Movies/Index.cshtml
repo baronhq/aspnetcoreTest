@@ -6,6 +6,34 @@
 
 <h1>Index</h1>
 
+@*<h3>招标信息查看</h3>
+<ul>
+    <li><a href="/e/member/wj_kuozhan/viewzbyg/">招标预告</a></li>
+    <li><a href="/e/member/wj_kuozhan/viewzbgg/">招标公告</a></li>
+    <li><a href="/e/member/wj_kuozhan/viewzbbg/">招标变更</a></li>
+    <li><a href="/e/member/wj_kuozhan/viewzhongbgg/">中标公告</a></li>
+    <li><a href="/e/member/wj_kuozhan/viewhtgg/">合同公告</a></li>
+    <li><a href="/e/member/wj_kuozhan/viewysgg/">验收公告</a></li>
+    <li><a href="/e/member/wj_kuozhan/viewcfgg/">处罚公告</a></li>
+</ul>
+<style>
+    .hover {
+        background-color: cadetblue;
+    }
+</style>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(function () {
+        $("ul li a[href^='/e/member/wj_kuozhan/'").each(function () {
+            if ($(this).text() == "招标预告") {
+                $(this).click(function () {
+                    $(this).addClass("hover").parent().parent().prev().addClass("hover");
+                });
+            }
+        });
+    });
+</script>*@
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
